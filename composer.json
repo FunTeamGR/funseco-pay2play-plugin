@@ -1,0 +1,39 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "funseco/pay2play-plugin",
+    "description": "Funseco pay2play plugin - paid replay/extend and skip buttons, vote pay (coppers for karma votes)",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "funseco/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funseco\\Pay2Play\\": "src/"
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Funseco\\Pay2Play\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "funseco": {
+            "id": "pay2play",
+            "name": "Pay2play",
+            "description": "pay2play plugin - paid replay/extend and skip buttons, vote pay (coppers for karma votes)",
+            "provider": "Funseco\\Pay2Play\\Pay2PlayServiceProvider"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
